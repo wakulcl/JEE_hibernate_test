@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Orígenes de datos -->
+	<data-sources>
+	</data-sources>
+
+	<!-- Beans de formulario -->
+	<form-beans>
+		<form-bean name="loginForm" type="cl.araucana.pruebastruts.forms.LoginForm" className="org.apache.struts.action.ActionFormBean">
+		</form-bean>
+	</form-beans>
+
+	<!-- Excepciones globales -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- Reenvíos globales -->
+	<global-forwards>
+	</global-forwards>
+
+	<!-- Correlaciones de acción -->
+
+	<!-- Recursos de mensaje -->
+	<action-mappings>
+		<action path="/test" type="cl.araucana.pruebastruts.actions.TestAction" name="loginForm" scope="request">
+			<forward name="success" path="index2.jsp">
+			</forward>
+			<forward name="failure" path="error.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+	<message-resources parameter="cl.araucana.pruebastruts.resources.ApplicationResources"/>
+
+</struts-config>
